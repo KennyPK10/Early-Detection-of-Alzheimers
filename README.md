@@ -40,4 +40,11 @@ Only one of the five generators improved the classification performance over the
 
 ---
 
+## How to reproduce similar results
 
+Start with downloading all the python notebooks, I used kaggle for it due to the ease of adding dataset directly and free GPU for faster processing.
+1. cnn-base (3).ipynb: This is the first step of the process, training of a CNN model without any extra augmentation using synthetic images. Trained on images from train folder of the dataset, and validated using val folder of the dataset. Get the baseline models results for inference.
+2. dcgan-latest(2).ipynb: This is the second step of process where we build a DCGAN for producing synthetic images of VeryMildDemented class to get more representation for that class in order to get a better decision boundary among overlapping classes. Trained on VeryMildDemented class in train folder of the dataset. Download the saved models and choose best generators with visual inspection and FID score.
+3. cnn-model-generator-comparison.ipynb: This takes in 5 best generators selected, adds 500 synthetic images produced of VeryMildDemented class separately to the original dataset per generator, retrains a CNN model to check the effect and results produced by each generator. Save the models created and validate them statistically as well.
+4. mcnemar-test.ipynb: This takes in every newly retrained CNN model per generator and Baseline CNN model, check statistically if there is there's a significant difference in performance. We comapre every newly trained model to the baseline validate the performances.
+*Every result for validation is shown in respective notebooks itself
