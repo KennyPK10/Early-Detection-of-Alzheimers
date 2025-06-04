@@ -48,3 +48,12 @@ Start with downloading all the python notebooks, I used kaggle for it due to the
 3. cnn-model-generator-comparison.ipynb: This takes in 5 best generators selected, adds 500 synthetic images produced of VeryMildDemented class separately to the original dataset per generator, retrains a CNN model to check the effect and results produced by each generator. Save the models created and validate them statistically as well.
 4. mcnemar-test.ipynb: This takes in every newly retrained CNN model per generator and Baseline CNN model, check statistically if there is there's a significant difference in performance. We comapre every newly trained model to the baseline validate the performances.
 *Every result for validation is shown in respective notebooks itself
+
+---
+
+## Repository Link
+
+The complete source code and materials for this project are available at:  
+**https://github.com/KennyPK10/Early-Detection-of-Alzheimers.git**
+
+---
